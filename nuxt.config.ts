@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    'radix-vue/nuxt'
   ],
   css: ['~/assets/css/main.css'],
   postcss: {
