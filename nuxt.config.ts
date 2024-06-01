@@ -4,9 +4,29 @@ export default defineNuxtConfig({
   modules: [
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
     '@nuxtjs/tailwindcss',
-    'radix-vue/nuxt'
+    'radix-vue/nuxt',
+    'nuxt-lucide-icons',
+    './src/module',
+    "shadcn-nuxt"
   ],
-  css: ['~/assets/css/main.css'],
+  lucide: {
+    namePrefix: 'Lucide'
+  },
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
+  },
+  css: [
+    '~/assets/css/main.css',
+    '~/assets/css/style.css'
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
